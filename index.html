@@ -1,0 +1,231 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>逸霏大帝</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typeit@8.7.1/dist/index.umd.js"></script>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;}
+    body{background:#fff;color:#483d51;overflow-x:hidden;}
+    section{width:100%;min-height:auto;display:flex;align-items:center;justify-content:center;flex-direction:column;}
+    .swiper{width:100%;height:100%;}
+    .swiper-slide{display:flex;align-items:center;justify-content:center;flex-direction:column;}
+    .title-section{background:url("https://img.091224.xyz/file/1747570293947_云层.gif") center/cover no-repeat;position:relative;min-height:100vh;}
+    .title-mask{backdrop-filter:blur(2px) brightness(.55);width:100%;padding:70px 20px;text-align:center;}
+    .title-section img.decor{position:absolute;width:110px;}
+    .decor.left{left:10px;bottom:30px;}
+    .decor.right{right:10px;bottom:30px;}
+    #tqyxhj{font-size:28px;font-weight:bold;color:#fbfbfa;letter-spacing:2px;}
+    .page1{padding:20px 0;min-height:auto;}
+    .page1 .swiper{padding:40px 20px 100px 20px;height:auto;min-height:auto;}
+    .page1-slide{width:550px;max-width:85%;background:#fbfbfa;border-radius:8px;padding:40px 20px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.12);}
+    .page1-slide img{width:100px;height:100px;margin:0 auto 16px;}
+    .page1-slide p{margin:4px 0;font-size:15px;line-height:1.4;}
+    .page1-slide .right{display:block;margin-top:8px;font-size:13px;color:#9e8270;}
+    .page2{min-height:auto;padding:20px 0;}
+    .page2 .swiper{height:520px;width:320px;}
+    .page2 .swiper-slide{background:#fff;border-radius:12px;padding:12px;width:260px!important;box-shadow:0 4px 10px rgba(0,0,0,.15);}
+    .page2 img{width:100%;border-radius:12px;}
+    .page2 p{font-size:14px;text-align:center;line-height:1.4;}
+    .page2 p b{display:block;font-size:16px;margin-bottom:4px;}
+    .page3-box{background:#cacaca;border-radius:10px;width:80%;max-width:600px;padding:12px 20px;font-size:24px;font-weight:bold;color:#fff;}
+    .page4{padding:20px 0;min-height:auto;}
+    .page4-text{text-align:center;}
+    .page4-text h1{font-size:36px;margin-bottom:8px;}
+    .page4-text p{font-size:14px;color:#6b6b6b;}
+    .peek-image-container{position:relative;width:100%;border-radius:12px;overflow:hidden;cursor:pointer;}
+    .peek-image{width:100%;border-radius:12px;transition:all 0.3s ease;}
+    .blur-overlay{position:absolute;top:0;left:0;width:100%;height:100%;backdrop-filter:blur(15px);background:rgba(255,255,255,0.3);transition:all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);border-radius:12px;}
+    .blur-overlay.hidden{opacity:0;transform:scale(0.8);pointer-events:none;}
+
+    .heart{position:fixed;left:0;top:0;transform:translate(-50%, -50%) scale(1);color:#ff4d6d;pointer-events:none;z-index:9999;font-size:18px;opacity:0.95;animation:heartFloat 1s ease-out forwards;}
+    @keyframes heartFloat{0%{transform:translate(-50%, -50%) scale(0.8);opacity:0.95;}70%{transform:translate(-50%, calc(-50% - 30px)) scale(1.1);opacity:0.85;}100%{transform:translate(-50%, calc(-50% - 60px)) scale(0.6);opacity:0;}}
+    @media (min-width:768px){.page4{padding:30px 0;}.page2{padding:30px 0;}}
+  </style>
+</head>
+
+<body>
+
+  <audio id="bgMusic" loop preload="auto">
+    <source src="./music.mp3" type="audio/mpeg">
+    您的浏览器不支持音频播放。
+  </audio>
+
+  <section class="title-section">
+    <img class="decor left"  src="https://ext.same-assets.com/2700061181/1591973587.gif" alt="">
+    <img class="decor right" src="https://ext.same-assets.com/2700061181/3441662881.gif" alt="">
+    <div class="title-mask"><p id="tqyxhj"></p></div>
+  </section>
+  <section class="page1">
+    <div class="swiper" id="swiper-page1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="page1-slide">
+            <img src="https://ext.same-assets.com/2700061181/3693503910.gif" alt="" loading="lazy">
+            <p id="lovetime"></p>
+            <p>我也不知道该准备一点什么给你逗你开心</p>
+            <p>还是写一点好玩的送给你吧~</p>
+            <span class="right">往右划动 →</span>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="page1-slide">
+            <p class="catText">爱死你 ↑</p>
+            <p><b>超级超级超级超级</b></p>
+            <p>爱你😘</p>
+            <p style="font-size:13px;"><span style="color:red;font-size:16px;"></span></p>
+            <span class="right">再划一次吧 →</span>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="page1-slide">
+            <p class="catText">拍你头😁</p>
+            <p>Pong~</p>
+            <p>希望你喜欢呀</p>
+            <p>爱你哟(๑′ᴗ‵๑)</p>
+            <b>我的<span style="color:pink;">宝</span></b>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <section class="page4">
+    <div class="page4-text"><h1>偷偷看你😁</h1><p>每次偷偷看你的时候，心都会砰砰跳</p></div>
+  </section>
+  <section class="page2">
+    <div class="swiper" id="swiper-peek">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="peek-image-container" onclick="revealImage(this)">
+            <img src="https://img.091224.xyz/file/1754831117027_mmexport1754831087640.jpg" class="peek-image" loading="lazy">
+            <div class="blur-overlay"></div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="peek-image-container" onclick="revealImage(this)">
+            <img src="https://img.091224.xyz/file/1754831116126_mmexport1754831085109.jpg" class="peek-image" loading="lazy">
+            <div class="blur-overlay"></div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  <section class="page4">
+    <div class="page4-text"><h1>Send To Future</h1><p>有你在的每一天都如糖果一样甜</p></div>
+  </section>
+  <script>
+
+    const bgMusic = document.getElementById('bgMusic');
+    let musicStarted = false;
+
+
+    bgMusic.volume = 0.8;
+
+
+    function tryPlayMusic() {
+      if (!musicStarted) {
+        bgMusic.play().then(() => {
+          musicStarted = true;
+        }).catch((error) => {
+
+        });
+      }
+    }
+
+
+    function startMusicOnInteraction() {
+      if (!musicStarted) {
+        bgMusic.play().then(() => {
+          musicStarted = true;
+        }).catch((error) => {
+
+        });
+      }
+    }
+
+
+    document.addEventListener('click', startMusicOnInteraction, { once: true });
+    document.addEventListener('touchstart', startMusicOnInteraction, { once: true });
+    document.addEventListener('keydown', startMusicOnInteraction, { once: true });
+
+
+    document.addEventListener('DOMContentLoaded', tryPlayMusic);
+
+
+    new TypeIt("#tqyxhj",{speed:90,waitUntilVisible:true}).type("李佳浩 With 逸霏大帝").go();
+    new Swiper('#swiper-page1',{spaceBetween:30,loop:true,pagination:{el:'.page1 .swiper-pagination',clickable:true}});
+    new Swiper('#swiper-peek',{
+      effect:"coverflow",
+      grabCursor:true,
+      centeredSlides:true,
+      slidesPerView:'auto',
+      loop:true,
+      coverflowEffect:{rotate:50,stretch:0,depth:200,modifier:1,slideShadows:true},
+      pagination:{el:'#swiper-peek .swiper-pagination',clickable:true}
+    });
+
+    const lovetimeEl=document.getElementById("lovetime");
+    function updateLoveTime(){
+      const start=new Date("2024-08-13T13:14:21");
+      const diff=Date.now()-start;
+      const years=Math.floor(diff/1000/60/60/24/365);
+      const days=Math.floor(diff/1000/60/60/24%365);
+      const hours=Math.floor(diff/1000/60/60%24);
+      const mins=Math.floor(diff/1000/60%60);
+      const secs=Math.floor(diff/1000%60);
+      const yearsText = years>0? years+"年":"";
+      lovetimeEl.textContent=`我们已经在一起 ${yearsText}${days}天${hours}小时${mins}分钟${secs}秒啦`;
+    }
+    updateLoveTime();
+    setInterval(updateLoveTime,1000);
+
+    function revealImage(container) {
+      const overlay = container.querySelector('.blur-overlay');
+      if(!overlay.classList.contains('hidden')) {
+        overlay.classList.add('hidden');
+      }
+    }
+
+
+    (function setupHearts() {
+      let lastSpawn = 0;
+      const minInterval = 80;
+      const colors = ['#ff4d6d', '#ff6b6b', '#f94144', '#f3722c', '#f9844a', '#ff85a1'];
+
+      function spawnHeart(x, y) {
+        const now = performance.now();
+        if (now - lastSpawn < minInterval) return;
+        lastSpawn = now;
+
+        const el = document.createElement('div');
+        el.className = 'heart';
+        el.textContent = '❤';
+        el.style.left = x + 'px';
+        el.style.top = y + 'px';
+        el.style.color = colors[Math.floor(Math.random() * colors.length)];
+        el.style.fontSize = 16 + Math.floor(Math.random() * 12) + 'px';
+
+        document.body.appendChild(el);
+        el.addEventListener('animationend', () => el.remove());
+      }
+
+
+      document.addEventListener('click', (e) => spawnHeart(e.clientX, e.clientY));
+      document.addEventListener('touchstart', (e) => {
+        const t = e.touches[0];
+        if (t) spawnHeart(t.clientX, t.clientY);
+      }, { passive: true });
+    })();
+  </script>
+</body>
+
+</html>
